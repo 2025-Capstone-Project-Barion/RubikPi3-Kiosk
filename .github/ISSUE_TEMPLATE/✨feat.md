@@ -7,7 +7,7 @@ assignees: WJLee22
 
 ---
 
-## 💡 What is this issue?
+## 💡 What features?
 <!-- 새로운 기능에 대해 간단하게 설명해주세요 -->
 
 ## ✅ Progress
