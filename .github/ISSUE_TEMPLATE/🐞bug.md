@@ -1,5 +1,5 @@
 ---
-name: "\U0001F41E[BUG]"
+name: "\U0001F41EBUG"
 about: Template for bug
 title: "[BUG] "
 labels: "bug, \U0001F530원준\U0001F530"
