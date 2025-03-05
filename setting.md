@@ -1,8 +1,6 @@
 # 🚀 Kiosk 환경 설정 가이드
 
-<키오스크 프로젝트의 환경 설정 간단 정리>
-
-
+<br>
 
 ## 1️⃣ Node.js & npm 설치
 
@@ -16,7 +14,7 @@ sudo apt install -y nodejs
 
 ------
 
-
+<br>
 
 ## 2️⃣ 프로젝트 종속성 설치
 
@@ -28,7 +26,7 @@ npm install
 
 ------
 
-
+<br>
 
 ## 3️⃣ Electron 설치
 
@@ -42,7 +40,7 @@ npm install --save-dev electron
 
 ------
 
-
+<br>
 
 ## 4️⃣ 개발 모드 실행 (Dev Mode)
 
@@ -56,7 +54,7 @@ npm start
 
 ------
 
-
+<br>
 
 ## 5️⃣ 배포 모드 실행 (Build & Package)
 
@@ -71,7 +69,7 @@ npm run build && npm run dist
 
 > 🔧 아래와 같이 `package.json`에서 `build:dist` 스크립트를 등록하면 더 간편하게 실행할 수 있음. 
 
-
+<br>
 
 ```json
 "scripts": {
@@ -81,20 +79,20 @@ npm run build && npm run dist
 
 ------
 
-
+<br>
 
 ## 6️⃣ ⚠️ 실 배포 시 주의할 점
 
 실제 배포된 앱은 `setup.exe`를 통해 설치되므로, `electron-is-dev` 모듈이 문제를 일으킬 수 있습니다.
 
-
+<br>
 
 ### 🚨 배포 모드에서 앱이 실행되지 않는 문제
 
 - **문제:** `electron-is-dev`가 `node_modules`에 접근하려 하지만, 배포된 앱에는 모듈 라이브러리가 없습니다.
 - **해결책:** `electron-is-dev`를 제거하고, `process.env.NODE_ENV`를 활용합니다.
 
-
+<br>
 
 ### ✅ 해결 방법
 
@@ -116,7 +114,7 @@ const startURL = isDev
   : `file://${path.join(__dirname, '../build/index.html')}`;
 ```
 
-
+<br>
 
 ### ✅ 추가 설정 (Windows / macOS & Linux)
 
@@ -133,7 +131,7 @@ const startURL = isDev
 
 ------
 
-
+<br>
 
 ## 7️⃣ (선택) `wait-on`을 사용한 Electron 실행 순서 보장
 
@@ -146,7 +144,7 @@ Electron은 React가 실행된 후 `localhost:3000`을 로드해야 합니다.
 npm install --save-dev wait-on
 ```
 
-
+<br>
 
 ### 📍 `package.json` 수정
 
@@ -161,7 +159,7 @@ npm install --save-dev wait-on
 
 ------
 
-
+<br>
 
 ## 📌 전체과정 요약정리
 
@@ -174,3 +172,6 @@ npm install --save-dev wait-on
 | **5️⃣ 빌드 & 배포**           | `npm run build && npm run dist`   | 실행 파일 패키징            |
 | **6️⃣ 배포 시 수정**          | `process.env.NODE_ENV` 사용       | `electron-is-dev` 제거      |
 | **7️⃣ 실행 순서 보장 (선택)** | `npm install --save-dev wait-on`  | React 실행 후 Electron 실행 |
+
+<br>
+<br>
