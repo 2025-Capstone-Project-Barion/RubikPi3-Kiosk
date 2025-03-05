@@ -2,7 +2,7 @@
 name: "✨FEAT"
 about: Template for features
 title: "[FEAT]"
-labels: "FEAT, \U0001F530원준\U0001F530"
+labels: "BUG, FEAT, \U0001F530원준\U0001F530"
 assignees: WJLee22
 
 ---
